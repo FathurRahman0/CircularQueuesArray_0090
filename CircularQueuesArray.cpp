@@ -6,7 +6,7 @@ class Queues
 private:
     static const int max = 5;
     int FRONT, REAR;
-    int queues_array[5];
+    int queue_array[5];
 
 public:
     Queues()
@@ -15,7 +15,7 @@ public:
         REAR = -1;
     }
 
-     void insert()
+    void insert()
     {
         int num;
         cout << "Enter a number: ";
@@ -43,7 +43,17 @@ public:
                 else
                     REAR = REAR + 1;
             }
-            queues_array[REAR] = num;
+            queue_array[REAR] = num;
+    }
+        
+    void remove()
+        {
+            // Cek apakah antrian kosong
+            if (FRONT == -1)
+            {
+                cout << "Queue underflow\n";
+                return;
+            }
+            cout << "\nThe Element deleted from the queue is: " << queue_array[FRONT] << "\n";
         }
-           
-}
+}    
