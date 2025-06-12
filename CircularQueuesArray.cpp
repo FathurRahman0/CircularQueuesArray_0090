@@ -132,6 +132,33 @@ int main() {
             cout << "Enter your choice (1-4): ";
             cin >> ch;
             cout << endl;
+        
+        switch (ch)
+            case '1':
+            {
+                Q.insert();
+                break;
+            }
+            case '2':
+            {
+                Q.remove();
+                break;
+            }
+            case '3':
+            {
+                Q.display();
+                break;
+            }
+
+            case '4':
+            {
+                return 0;
+            }
+            default:
+            {
+                cout << "Invalid option!!" << endl;
+                break;
+            }
         }
     }
 }
